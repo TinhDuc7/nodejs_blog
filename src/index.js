@@ -13,7 +13,7 @@ app.use(
     express.urlencoded({
       extended: true,
     }),
-)
+);
 app.use(express.json());
 // XHLHttpRequest, fetch, axios,...  các thư viện có thể dùng tạo request
 
