@@ -11,7 +11,10 @@
         "prepare": "husky install"
     },
     "lint-staged": {
-        "src/**/*.{js,json,scss,html}": ["eslint", "eslint --fix"]
+        "src/**/*.{js,json,scss,html}": [
+            "eslint --fix",
+            "git add"
+            ]
     },
     "repository": {
         "type": "git",
