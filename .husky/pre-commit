@@ -1,6 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-
-npx eslint src/**/*.js
 npx eslint src/**/*.js --fix
