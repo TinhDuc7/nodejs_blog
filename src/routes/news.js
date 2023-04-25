@@ -1,9 +1,9 @@
 const express = require('express');
-    const router = express.Router();
+const router = express.Router();
 
-    const newsControler = require('../app/controllers/NewsController');
+const newsControler = require('../app/controllers/NewsController');
 
-//newsController.index
+// newsController.index
 router.use('/:slug', newsControler.show);
 router.use('/', newsControler.index);
 

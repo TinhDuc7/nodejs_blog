@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended" ,"google"],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "semi": ["warn", "always"],
+        "quotes": [1, "single"],
+        "no-console": "error",
+        "require-jsdoc":0,
+        "new-cap":"off"
+    }
+}
