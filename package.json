@@ -8,13 +8,16 @@
         "start": "nodemon --inspect src/index.js",
         "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "pre-commit": "lint-staged",
+        "eslint":"npx eslint src/**/*.js --fix"
     },
     "lint-staged": {
+        "*.js": "eslint",
         "src/**/*.{js,json,scss,html}": [
-            "eslint --fix",
+            "prettier --single-quote --trailing-comma all --write",
             "git add"
-            ]
+        ]
     },
     "repository": {
         "type": "git",
@@ -38,8 +41,14 @@
         "express-handlebars": "^7.0.4"
     },
     "devDependencies": {
+        "@babel/core": "^7.21.4",
+        "@babel/eslint-parser": "^7.21.3",
+        "babel-eslint": "^10.1.0",
         "eslint": "^8.39.0",
         "eslint-config-google": "^0.14.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.1",
         "morgan": "^1.10.0",

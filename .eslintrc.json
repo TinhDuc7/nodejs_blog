@@ -2,14 +2,19 @@
     "env": {
         "browser": true,
         "commonjs": true,
-        "es2021": true,
+        "es2022": true,
         "node": true
     },
     "extends": ["eslint:recommended" ,"google"],
     "overrides": [
     ],
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "parser": "babel-eslint",
+        "ecmaVersion": "latest",
+        "sourceType": "script",
+        "ecmaFeatures": {
+              "jsx": true
+          }
     },
     "rules": {
         "semi": ["warn", "always"],
