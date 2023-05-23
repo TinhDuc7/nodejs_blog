@@ -4,17 +4,17 @@
     "main": "src/index.js",
     "scripts": {
         "format": "lint-staged",
-        "bea": "prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss,html}",
+        "bea": "prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss,html,hbs}",
         "start": "nodemon --inspect src/index.js",
         "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
         "test": "echo \"Error: no test specified\" && exit 1",
         "prepare": "husky install",
         "pre-commit": "lint-staged",
-        "eslint":"npx eslint src/**/*.js --fix"
+        "eslint": "npx eslint src/**/*.js --fix"
     },
     "lint-staged": {
         "*.js": "eslint",
-        "src/**/*.{js,json,scss,html}": [
+        "src/**/*.{js,json,scss,html,hbs}": [
             "prettier --single-quote --trailing-comma all --write",
             "git add"
         ]
@@ -38,7 +38,9 @@
     "homepage": "https://github.com/TinhDuc7/nodejs_blog#readme",
     "dependencies": {
         "express": "^4.18.2",
-        "express-handlebars": "^7.0.4"
+        "express-handlebars": "^7.0.4",
+        "method-override": "^3.0.0",
+        "mongoose": "^7.1.0"
     },
     "devDependencies": {
         "@babel/core": "^7.21.4",
@@ -51,6 +53,7 @@
         "eslint-plugin-react": "^7.32.2",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.1",
+        "mongoose-slug-updater": "^3.3.0",
         "morgan": "^1.10.0",
         "node-sass": "^8.0.0",
         "nodemon": "^2.0.22",
